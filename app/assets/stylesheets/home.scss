@@ -1,0 +1,92 @@
+form label, form input {
+    display: block;
+    margin: 10px;
+}
+
+.Cform{
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: block;
+    text-align: center;    
+    input{
+        
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #333;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+input[type=submit]:hover {
+    background-color: #111;
+}
+
+.flash_message{
+    color: red;
+    background-color: #333;
+    border-style: solid;
+    border-color: red;
+    font-size: 25px;
+    margin-bottom: 30px;
+    line-height: 33px;
+    height: 40px;
+}
+
+.header{
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+        border-right:1px solid #bbb;
+        last-child {
+            border-right: none;
+        }
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            hover{
+            background-color: #111;
+            }
+
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}

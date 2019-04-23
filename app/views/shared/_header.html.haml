@@ -1,0 +1,19 @@
+%header
+    %div{:class => "header"}
+        %ul
+            %li
+                =link_to t('.home'), root_path
+            %li
+                =link_to t('.movies'), movies_path
+            %li
+                =link_to t('.contact'), contact_path
+            -if user_signed_in?
+                %li
+                    = link_to t('profile'), edit_user_registration_path
+                %li{ :style => "float:right"}
+                    = link_to t('logout'), destroy_user_session_path, method: 'delete'
+            -else  
+                %li
+                    = link_to t('login'), new_user_session_path
+                %li{ :style => "float:right"}
+                    = link_to t('sign_up'), new_user_registration_path

@@ -1,0 +1,47 @@
+%div{:class => "movies_show_commands"}
+  %ul.commands
+    %li
+    %li= link_to 'Back', movies_path
+    %li= link_to 'Edit', edit_movie_path(@movie)
+    %li= link_to 'Delete', @movie, method: :delete, data: { confirm: 'Are you sure?' }
+    %li= link_to 'Add Review', new_movie_review_path(@movie)
+
+%div{:class => "movies_show"}
+  %div{:class => "movies_show_title"}
+    %p
+      %h1= @movie.title
+  %p
+    %b Movie length:
+    = @movie.movie_length
+  %p
+    %b Director:
+    = @movie.director
+  %p
+    %b Rating:
+    = @movie.rating
+  %p
+    %b Description:
+    = @movie.description
+    
+%div{:class => "reviews_show"}
+  %h2 Reviews
+  
+  -if @reviews.blank?
+    %h3 No reviews yet
+  -else
+    %table{:id => "reviews"}
+      %tbody
+        %tr
+          %th User
+          %th Rating
+          %th Comment
+        - @reviews.each do |review|
+          %tr
+            %td= review.user.email
+            %td= review.rating
+            %td= review.comment
+      
+      
+      
+      
+      
